@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="U"
+run/main_scene="uid://duvs4xwqohjc0"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
+[input]
+
+game_pause={
+"deadzone": 0.2,
+"events": []
+}
