@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm5s6cn53tl8k"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgvdt"]
+size = Vector3(120, 300, 80)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd5kl"]
+
+[node name="Station1" type="Node3D"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 150, 0)
+mesh = SubResource("BoxMesh_kgvdt")
+material = SubResource("StandardMaterial3D_nd5kl")

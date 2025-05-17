@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://duvs4xwqohjc0"]
+
+[ext_resource type="Script" uid="uid://cmxpgdy0b35ko" path="res://game/scenes/main.gd" id="1_20rwd"]
+[ext_resource type="PackedScene" uid="uid://c2gufjbilatdc" path="res://game/ui/main_menu.tscn" id="2_8buom"]
+[ext_resource type="PackedScene" uid="uid://c6te5xhex8y58" path="res://game/player/Player.tscn" id="2_gp8w2"]
+[ext_resource type="PackedScene" uid="uid://c46g62nwnaqv5" path="res://game/world/world.tscn" id="3_8buom"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_20rwd")
+
+[node name="Player" parent="." instance=ExtResource("2_gp8w2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.829202, 0)
+MOVE_SPEED = 12.0
+first_person = true
+
+[node name="World" parent="." instance=ExtResource("3_8buom")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("2_8buom")]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0iqtyt5tims0"]
+
+[ext_resource type="PackedScene" uid="uid://gf06tkxn83fp" path="res://game/assets/models/BlenderCube.blend" id="1_vfcfb"]
+
+[node name="ReferenceCube" type="Node3D"]
+
+[node name="BlenderCube" parent="." instance=ExtResource("1_vfcfb")]
