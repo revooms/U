@@ -2,13 +2,11 @@ extends Node
 
 signal pause_changed(ispaused: bool)
 
-@export var title: String = "Untitled Game"
-@export var is_paused: bool = false
-
+var is_paused: bool = false
 
 func _ready() -> void:
 	print("Game ready")
-	
+
 
 func TogglePause():
 	is_paused = not is_paused
@@ -20,15 +18,16 @@ func Pause() -> void:
 	is_paused = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	pause_changed.emit(is_paused)
-	
+	get_tree().paused = true
+
 
 func Unpause()->void:
 	print("Unpausing game")
 	is_paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	pause_changed.emit(is_paused)
-
+	get_tree().paused = false
 
 func ExitGame() -> void:
 	print("Exiting game")
-	get_tree().quit(0)
+	get_tree().quit()
