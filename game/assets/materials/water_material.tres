@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://c6quwugix4mkw"]
+
+[ext_resource type="Shader" uid="uid://cee52ygb776mr" path="res://game/assets/materials/water.gdshader" id="1_a7qhp"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a7qhp"]
+frequency = 0.0708
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a7qhp"]
+seamless = true
+as_normal_map = true
+bump_strength = 1.1
+noise = SubResource("FastNoiseLite_a7qhp")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3xot1"]
+frequency = 0.0562
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3xot1"]
+seamless = true
+as_normal_map = true
+bump_strength = 2.1
+noise = SubResource("FastNoiseLite_3xot1")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_a7qhp")
+shader_parameter/uAlbedo = Color(0.0484625, 0.108507, 0.167859, 1)
+shader_parameter/uTexureNormal = SubResource("NoiseTexture2D_a7qhp")
+shader_parameter/uTexureNormal2 = SubResource("NoiseTexture2D_3xot1")
+shader_parameter/uNormalMix = 0.2
+shader_parameter/uWaveDirection = Vector2(1, 0)
+shader_parameter/uWaveDirection2 = Vector2(0, 1)
+shader_parameter/uTimeScale = 0.0015
+shader_parameter/uWaveScale = 1.6
