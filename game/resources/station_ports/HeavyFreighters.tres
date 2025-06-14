@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StationPort" load_steps=2 format=3 uid="uid://dn2invqperpp2"]
+
+[ext_resource type="Script" uid="uid://b1gvkyguvbjnu" path="res://game/obj/Station/StationPort.gd" id="1_v2snj"]
+
+[resource]
+script = ExtResource("1_v2snj")
+title = "Heavy Freighters"
+uuid = "STATIONPORT-HEAVY"
+capacity = 250000
+metadata/_custom_type_script = "uid://b1gvkyguvbjnu"

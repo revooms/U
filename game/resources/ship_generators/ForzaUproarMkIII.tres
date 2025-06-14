@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShipGenerator" load_steps=2 format=3 uid="uid://d3qxjrpfkx1dd"]
+
+[ext_resource type="Script" uid="uid://hfdm0prsh2ru" path="res://game/obj/Ship/ShipGenerator.gd" id="1_og8jw"]
+
+[resource]
+script = ExtResource("1_og8jw")
+title = "Forza UpROAR Mk.III"
+uuid = "SHIPGEN-FRZUPR"
+weight = 1500
+volume = 500
+max_generated_energy = 50000
+fuel_consumption = 2
+price = 12.75
+metadata/_custom_type_script = "uid://hfdm0prsh2ru"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StationGenerator" load_steps=2 format=3 uid="uid://c82xjs0gkjndo"]
+
+[ext_resource type="Script" uid="uid://cxfm6c5376bye" path="res://game/obj/Station/StationGenerator.gd" id="1_73cm7"]
+
+[resource]
+script = ExtResource("1_73cm7")
+title = "Makusa 12k"
+uuid = "STATIONGENERATOR-MAKUSA-12k"
+metadata/_custom_type_script = "uid://cxfm6c5376bye"

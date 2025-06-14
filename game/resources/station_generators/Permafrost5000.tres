@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StationGenerator" load_steps=2 format=3 uid="uid://bkmwlht3t8ivq"]
+
+[ext_resource type="Script" uid="uid://cxfm6c5376bye" path="res://game/obj/Station/StationGenerator.gd" id="1_22w2k"]
+
+[resource]
+script = ExtResource("1_22w2k")
+title = "Permafrost 5000"
+uuid = "STATIONGENERATOR-PERMAFROST-5000"
+metadata/_custom_type_script = "uid://cxfm6c5376bye"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkpu65a0smt8f"]
+
+[ext_resource type="Script" uid="uid://ci0rby43fdbu5" path="res://game/player/PlayerShip.gd" id="1_u8tni"]
+
+[node name="PlayerShip" type="Node3D"]
+script = ExtResource("1_u8tni")

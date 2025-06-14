@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Station" load_steps=5 format=3 uid="uid://cboslyyebu0uo"]
+
+[ext_resource type="Script" uid="uid://cb3nhjab2s78s" path="res://game/obj/Station/Station.gd" id="1_whcr5"]
+[ext_resource type="Script" uid="uid://b1gvkyguvbjnu" path="res://game/obj/Station/StationPort.gd" id="2_85y8v"]
+[ext_resource type="Resource" uid="uid://c82xjs0gkjndo" path="res://game/prefabs/resources/station_generators/Makusa12000.tres" id="2_wx464"]
+[ext_resource type="Resource" uid="uid://bkrm0myt3tnak" path="res://game/prefabs/resources/station_ports/Visitors.tres" id="4_j8qx5"]
+
+[resource]
+script = ExtResource("1_whcr5")
+title = "Hitchcock's Secret Pleasure"
+uuid = "ST-0815-BMOVIE"
+station_generator = ExtResource("2_wx464")
+station_ports = Array[ExtResource("2_85y8v")]([ExtResource("4_j8qx5")])
+metadata/_custom_type_script = "uid://cb3nhjab2s78s"

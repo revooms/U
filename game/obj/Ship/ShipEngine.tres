@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShipEngine" load_steps=2 format=3 uid="uid://ciaxgfskaby6j"]
+
+[ext_resource type="Script" uid="uid://b0s17roq3s2ef" path="res://game/obj/Ship/ShipEngine.gd" id="1_8xxnd"]
+
+[resource]
+script = ExtResource("1_8xxnd")
+title = "Untitled Ship Sensor"
+uuid = "***UNIQUEID***"
+weight = 500
+volume = 25
+hp = 500
+energy_consumption = 5
+price = 5200.99

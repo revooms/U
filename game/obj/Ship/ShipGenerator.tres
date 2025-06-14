@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ShipGenerator" load_steps=2 format=3 uid="uid://bpmvbfllwl6f1"]
+
+[ext_resource type="Script" uid="uid://hfdm0prsh2ru" path="res://game/obj/Ship/ShipGenerator.gd" id="1_lq3dp"]
+
+[resource]
+script = ExtResource("1_lq3dp")
+title = "Untitled Ship Generator"
+uuid = "***UNIQUEID***"
+weight = 500
+volume = 25
+max_generated_energy = 500
+fuel_consumption = 5
+price = 5200.99

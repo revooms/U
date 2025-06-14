@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Ship" load_steps=2 format=3 uid="uid://bb2b23mrd4n0d"]
+
+[ext_resource type="Script" uid="uid://dd7f2diwgm5hf" path="res://game/obj/Ship/Ship.gd" id="1_4jg2s"]
+
+[resource]
+script = ExtResource("1_4jg2s")
+title = "Untitled Ship"
+uuid = "***UNIQUEID***"

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvxepov4hu856"]
+
+[ext_resource type="Script" uid="uid://ds0ydcscfejqh" path="res://game/prefabs/ships/ship_1.gd" id="1_3m7hi"]
+[ext_resource type="PackedScene" uid="uid://b5vcd0q1nmdqw" path="res://game/assets/models/ships/Ship1.blend" id="1_uc88m"]
+
+[node name="Ship1" type="Node3D"]
+script = ExtResource("1_3m7hi")
+
+[node name="Ship1" parent="." instance=ExtResource("1_uc88m")]

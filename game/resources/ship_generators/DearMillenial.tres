@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShipGenerator" load_steps=2 format=3 uid="uid://b2x7h1jgyaori"]
+
+[ext_resource type="Script" uid="uid://hfdm0prsh2ru" path="res://game/obj/Ship/ShipGenerator.gd" id="1_1nt8f"]
+
+[resource]
+script = ExtResource("1_1nt8f")
+title = "Dear Millenial"
+uuid = "SHIPGEN-MILL"
+weight = 5000
+volume = 500
+max_generated_energy = 500
+fuel_consumption = 5
+price = 5200.99
+metadata/_custom_type_script = "uid://hfdm0prsh2ru"

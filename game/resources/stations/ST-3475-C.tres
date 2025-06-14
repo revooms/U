@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Station" load_steps=7 format=3 uid="uid://6ql4wqwxj668"]
+
+[ext_resource type="Script" uid="uid://cb3nhjab2s78s" path="res://game/obj/Station/Station.gd" id="1_t3x76"]
+[ext_resource type="Script" uid="uid://b1gvkyguvbjnu" path="res://game/obj/Station/StationPort.gd" id="2_4vs3d"]
+[ext_resource type="Resource" uid="uid://bkmwlht3t8ivq" path="res://game/prefabs/resources/station_generators/Permafrost5000.tres" id="2_dkbvy"]
+[ext_resource type="Resource" uid="uid://bkrm0myt3tnak" path="res://game/prefabs/resources/station_ports/Visitors.tres" id="4_q4af1"]
+[ext_resource type="Resource" uid="uid://chqj0am7qqnr8" path="res://game/prefabs/resources/station_ports/MediumFreighters.tres" id="5_65dtx"]
+[ext_resource type="Resource" uid="uid://dn2invqperpp2" path="res://game/prefabs/resources/station_ports/HeavyFreighters.tres" id="6_vn7r2"]
+
+[resource]
+script = ExtResource("1_t3x76")
+title = "New Valentine"
+uuid = "ST-3475-C"
+station_generator = ExtResource("2_dkbvy")
+station_ports = Array[ExtResource("2_4vs3d")]([ExtResource("4_q4af1"), ExtResource("5_65dtx"), ExtResource("6_vn7r2")])
+metadata/_custom_type_script = "uid://cb3nhjab2s78s"

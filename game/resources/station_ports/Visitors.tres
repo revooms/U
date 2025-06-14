@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StationPort" load_steps=2 format=3 uid="uid://bkrm0myt3tnak"]
+
+[ext_resource type="Script" uid="uid://b1gvkyguvbjnu" path="res://game/obj/Station/StationPort.gd" id="1_w7ehk"]
+
+[resource]
+script = ExtResource("1_w7ehk")
+title = "Visitors"
+uuid = "STATIONPORT-VISITORS"
+capacity = 10000
+metadata/_custom_type_script = "uid://b1gvkyguvbjnu"

@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd17a55h3rcai"]
+
+[ext_resource type="PackedScene" uid="uid://c6te5xhex8y58" path="res://game/player/Player.tscn" id="1_jetyy"]
+[ext_resource type="Script" uid="uid://bbbeeve4wdokn" path="res://game/world/maps/test_station_environment.gd" id="1_ybv5h"]
+[ext_resource type="Resource" path="res://game/prefabs/resources/TestWorldResource.tres" id="2_hnexl"]
+[ext_resource type="PackedScene" uid="uid://dm5s6cn53tl8k" path="res://game/prefabs/stations/station1.tscn" id="2_ybv5h"]
+[ext_resource type="Environment" uid="uid://212vl3pv7pwc" path="res://game/game_environment.tres" id="5_0yun8"]
+[ext_resource type="CameraAttributesPractical" uid="uid://crd8honygb602" path="res://game/game_camera_attributes_practical.tres" id="6_ld1mt"]
+
+[node name="TestStationEnvironment" type="Node3D"]
+script = ExtResource("1_ybv5h")
+world_resource = ExtResource("2_hnexl")
+
+[node name="Player" parent="." instance=ExtResource("1_jetyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.5596, -5.49594)
+
+[node name="Station1" parent="." instance=ExtResource("2_ybv5h")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("5_0yun8")
+camera_attributes = ExtResource("6_ld1mt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.968068, 0.186814, -0.167165, -0.0973184, 0.894589, 0.436164, 0.231025, -0.405969, 0.884204, -6.54271, 54.2095, 0)

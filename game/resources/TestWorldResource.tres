@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="WorldResource" load_steps=19 format=3 uid="uid://0cjel88kob0b"]
+
+[ext_resource type="Script" uid="uid://dedbrrxuwbbb" path="res://game/obj/WorldResource.gd" id="1_fufkw"]
+[ext_resource type="Script" uid="uid://b0s17roq3s2ef" path="res://game/obj/Ship/ShipEngine.gd" id="2_tubvh"]
+[ext_resource type="Script" uid="uid://hfdm0prsh2ru" path="res://game/obj/Ship/ShipGenerator.gd" id="3_2exfr"]
+[ext_resource type="Resource" uid="uid://c48svbnj8wffe" path="res://game/prefabs/resources/ship_engines/Bullwork2.tres" id="3_y05on"]
+[ext_resource type="Resource" uid="uid://h0cyubbwk423" path="res://game/prefabs/resources/ship_engines/DearCommodore512.tres" id="4_qn3kh"]
+[ext_resource type="Script" uid="uid://b4eu4s08ps46q" path="res://game/obj/Ship/ShipHull.gd" id="4_vqtwd"]
+[ext_resource type="Script" uid="uid://cxfm6c5376bye" path="res://game/obj/Station/StationGenerator.gd" id="5_hana4"]
+[ext_resource type="Resource" uid="uid://b2x7h1jgyaori" path="res://game/prefabs/resources/ship_generators/DearMillenial.tres" id="6_07gou"]
+[ext_resource type="Script" uid="uid://b1gvkyguvbjnu" path="res://game/obj/Station/StationPort.gd" id="6_lhmno"]
+[ext_resource type="Resource" uid="uid://d3qxjrpfkx1dd" path="res://game/prefabs/resources/ship_generators/ForzaUproarMkIII.tres" id="7_7v52n"]
+[ext_resource type="Resource" uid="uid://c7ac8hklejq23" path="res://game/prefabs/resources/ship_hulls/BahamaMkI.tres" id="9_4vonb"]
+[ext_resource type="Resource" uid="uid://bcc0lk80lje0j" path="res://game/prefabs/resources/ship_hulls/ModestaMkII.tres" id="10_kwpwi"]
+[ext_resource type="Resource" uid="uid://c82xjs0gkjndo" path="res://game/prefabs/resources/station_generators/Makusa12000.tres" id="12_1q0rd"]
+[ext_resource type="Resource" uid="uid://bkmwlht3t8ivq" path="res://game/prefabs/resources/station_generators/Permafrost5000.tres" id="13_caec5"]
+[ext_resource type="Resource" uid="uid://bkrm0myt3tnak" path="res://game/prefabs/resources/station_ports/Visitors.tres" id="15_n5ht4"]
+[ext_resource type="Resource" uid="uid://chqj0am7qqnr8" path="res://game/prefabs/resources/station_ports/MediumFreighters.tres" id="16_7fji3"]
+[ext_resource type="Resource" uid="uid://dn2invqperpp2" path="res://game/prefabs/resources/station_ports/HeavyFreighters.tres" id="17_42136"]
+[ext_resource type="Script" uid="uid://cb3nhjab2s78s" path="res://game/obj/Station/Station.gd" id="18_qn3kh"]
+
+[resource]
+script = ExtResource("1_fufkw")
+station_generators = Array[ExtResource("5_hana4")]([ExtResource("12_1q0rd"), ExtResource("13_caec5")])
+station_ports = Array[ExtResource("6_lhmno")]([ExtResource("15_n5ht4"), ExtResource("16_7fji3"), ExtResource("17_42136")])
+ship_generators = Array[ExtResource("3_2exfr")]([ExtResource("6_07gou"), ExtResource("7_7v52n")])
+ship_engines = Array[ExtResource("2_tubvh")]([ExtResource("3_y05on"), ExtResource("4_qn3kh")])
+ship_hulls = Array[ExtResource("4_vqtwd")]([ExtResource("9_4vonb"), ExtResource("10_kwpwi")])
+stations = Array[ExtResource("18_qn3kh")]([])
+metadata/_custom_type_script = "uid://dedbrrxuwbbb"

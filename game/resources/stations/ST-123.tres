@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Station" load_steps=6 format=3 uid="uid://ctmr8pfxgso5q"]
+
+[ext_resource type="Script" uid="uid://cb3nhjab2s78s" path="res://game/obj/Station/Station.gd" id="1_q7o2l"]
+[ext_resource type="Script" uid="uid://b1gvkyguvbjnu" path="res://game/obj/Station/StationPort.gd" id="2_52e0a"]
+[ext_resource type="Resource" uid="uid://bkmwlht3t8ivq" path="res://game/prefabs/resources/station_generators/Permafrost5000.tres" id="2_tndp3"]
+[ext_resource type="Resource" uid="uid://bkrm0myt3tnak" path="res://game/prefabs/resources/station_ports/Visitors.tres" id="3_jj7b2"]
+[ext_resource type="Resource" uid="uid://chqj0am7qqnr8" path="res://game/prefabs/resources/station_ports/MediumFreighters.tres" id="4_tndp3"]
+
+[resource]
+script = ExtResource("1_q7o2l")
+title = "Thaiphoon #2"
+uuid = "ST-123"
+station_generator = ExtResource("2_tndp3")
+station_ports = Array[ExtResource("2_52e0a")]([ExtResource("3_jj7b2"), ExtResource("4_tndp3")])
+metadata/_custom_type_script = "uid://cb3nhjab2s78s"

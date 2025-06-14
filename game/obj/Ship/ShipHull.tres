@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ShipHull" load_steps=2 format=3 uid="uid://b54os8u1tcsiy"]
+
+[ext_resource type="Script" uid="uid://b4eu4s08ps46q" path="res://game/obj/Ship/ShipHull.gd" id="1_lafl3"]
+
+[resource]
+script = ExtResource("1_lafl3")
+title = "Untitled Ship Hull"
+uuid = "***UNIQUEID***"
+weight = 500
+volume = 25
+price = 5200.99

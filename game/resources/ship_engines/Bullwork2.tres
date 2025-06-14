@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShipEngine" load_steps=2 format=3 uid="uid://c48svbnj8wffe"]
+
+[ext_resource type="Script" uid="uid://b0s17roq3s2ef" path="res://game/obj/Ship/ShipEngine.gd" id="1_cg0vh"]
+
+[resource]
+script = ExtResource("1_cg0vh")
+title = "Bullwork 2"
+uuid = "SHIPENG-BULLWORK2"
+weight = 500
+volume = 25
+hp = 500
+energy_consumption = 5
+price = 5200.99
+metadata/_custom_type_script = "uid://b0s17roq3s2ef"

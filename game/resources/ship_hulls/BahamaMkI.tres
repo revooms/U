@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShipHull" load_steps=2 format=3 uid="uid://c7ac8hklejq23"]
+
+[ext_resource type="Script" uid="uid://b4eu4s08ps46q" path="res://game/obj/Ship/ShipHull.gd" id="1_fmluh"]
+
+[resource]
+script = ExtResource("1_fmluh")
+title = "Bahama Mk.I"
+uuid = "SHIPHULL-BHM-MK-I"
+weight = 750
+volume = 75
+armor = 5000
+resistance = 2
+price = 7500.0
+metadata/_custom_type_script = "uid://b4eu4s08ps46q"

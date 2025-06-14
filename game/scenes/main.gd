@@ -1,7 +1,7 @@
 extends Node3D
 
 func _ready() -> void:
-	pass
+	print("Main ready")
 
 
 func _unhandled_input(event: InputEvent) -> void:

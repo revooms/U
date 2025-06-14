@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShipEngine" load_steps=2 format=3 uid="uid://h0cyubbwk423"]
+
+[ext_resource type="Script" uid="uid://b0s17roq3s2ef" path="res://game/obj/Ship/ShipEngine.gd" id="1_r23ws"]
+
+[resource]
+script = ExtResource("1_r23ws")
+title = "Dear Commodore 512"
+uuid = "SHIPENG-COMMODORE512"
+weight = 500
+volume = 125
+hp = 512
+energy_consumption = 4
+price = 7500.0
+metadata/_custom_type_script = "uid://b0s17roq3s2ef"

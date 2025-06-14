@@ -1,0 +1,130 @@
+[gd_scene load_steps=21 format=3 uid="uid://c46g62nwnaqv5"]
+
+[ext_resource type="Script" uid="uid://bv3kushyw8jq6" path="res://game/world/maps/world.gd" id="1_5hesp"]
+[ext_resource type="Environment" uid="uid://212vl3pv7pwc" path="res://game/game_environment.tres" id="1_k7f6b"]
+[ext_resource type="CameraAttributesPractical" uid="uid://crd8honygb602" path="res://game/game_camera_attributes_practical.tres" id="2_4adp2"]
+[ext_resource type="Texture2D" uid="uid://cgdy1x30ehmwc" path="res://game/assets/textures/prototypes/orange.png" id="3_we8ss"]
+[ext_resource type="Texture2D" uid="uid://tcs8whiunupc" path="res://game/assets/textures/prototypes/orange_n.png" id="4_ibfx6"]
+[ext_resource type="PackedScene" uid="uid://d0iqtyt5tims0" path="res://game/prefabs/npc/reference_cube.tscn" id="5_uynus"]
+[ext_resource type="Texture2D" uid="uid://bfrk84wkg1lba" path="res://game/assets/textures/prototypes/green.png" id="5_vwhhl"]
+[ext_resource type="Texture2D" uid="uid://ny80tpie1ovk" path="res://game/assets/textures/prototypes/green_n.png" id="6_5hesp"]
+[ext_resource type="PackedScene" uid="uid://dm5s6cn53tl8k" path="res://game/prefabs/stations/station1.tscn" id="6_uynus"]
+[ext_resource type="PackedScene" uid="uid://c6te5xhex8y58" path="res://game/player/Player.tscn" id="10_fnsbx"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vwhhl"]
+size = Vector2(1000, 1000)
+
+[sub_resource type="Gradient" id="Gradient_6l7jx"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_aqibe"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ufdhy"]
+seamless = true
+color_ramp = SubResource("Gradient_6l7jx")
+noise = SubResource("FastNoiseLite_aqibe")
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_k7f6b"]
+_shader_parameters = {
+&"bias_distance": 512.0,
+&"blend_sharpness": 0.87,
+&"depth_blur": 0.0,
+&"enable_macro_variation": true,
+&"enable_projection": true,
+&"height_blending": true,
+&"macro_variation1": Color(1, 1, 1, 1),
+&"macro_variation2": Color(1, 1, 1, 1),
+&"macro_variation_slope": 0.333,
+&"mipmap_bias": 1.0,
+&"noise1_angle": 0.0,
+&"noise1_offset": Vector2(0.5, 0.5),
+&"noise1_scale": 0.04,
+&"noise2_scale": 0.076,
+&"noise3_scale": 0.225,
+&"noise_texture": SubResource("NoiseTexture2D_ufdhy"),
+&"projection_angular_division": 2.0,
+&"projection_threshold": 0.8,
+&"world_space_normal_blend": true
+}
+show_region_grid = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4adp2"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_dess5"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_4adp2")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_ibfx6"]
+name = "texture_09"
+albedo_texture = ExtResource("3_we8ss")
+normal_texture = ExtResource("4_ibfx6")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_prd21"]
+name = "green"
+id = 1
+albedo_texture = ExtResource("5_vwhhl")
+normal_texture = ExtResource("6_5hesp")
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_uynus"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_dess5")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_ibfx6"), SubResource("Terrain3DTextureAsset_prd21")])
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_5hesp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_k7f6b")
+camera_attributes = ExtResource("2_4adp2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.859331, 0.167285, -0.483287, 0.000103515, 0.944933, 0.327264, 0.51142, -0.281278, 0.811993, 0, 23.4583, 0)
+light_color = Color(0.408329, 0.408329, 0.408329, 1)
+shadow_enabled = true
+shadow_opacity = 0.45
+
+[node name="KillPlane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -79.4646, 0)
+mesh = SubResource("PlaneMesh_vwhhl")
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+data_directory = "res://game/world/terrain"
+material = SubResource("Terrain3DMaterial_k7f6b")
+assets = SubResource("Terrain3DAssets_uynus")
+show_grid = true
+collision_mode = 3
+show_region_grid = true
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ReferenceCube" parent="Node" instance=ExtResource("5_uynus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46283, 0, 4.94023)
+
+[node name="Station1" parent="." instance=ExtResource("6_uynus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.4772, 225.674)
+
+[node name="Player" parent="." instance=ExtResource("10_fnsbx")]
