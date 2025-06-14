@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2gufjbilatdc"]
+
+[ext_resource type="Script" uid="uid://bdbgatvqnxik1" path="res://game/ui/pause_menu.gd" id="1_spbnf"]
+[ext_resource type="Theme" uid="uid://4mog5df43tim" path="res://game/game_ui_theme.tres" id="2_3tcw5"]
+[ext_resource type="PackedScene" uid="uid://dbh2jnsymkwjj" path="res://game/ui/hint_controls.tscn" id="2_du0dh"]
+[ext_resource type="Script" uid="uid://c57tplhycy8bl" path="res://game/ui/components/pause_menu_button.gd" id="2_otv6y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxuhx"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_otv6y"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_vnflq"]
+events = [SubResource("InputEventKey_otv6y")]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_spbnf")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 18
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "PAUSED"
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+theme_override_styles/separator = SubResource("StyleBoxFlat_vxuhx")
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_vnflq")
+text = "Resume"
+alignment = 0
+script = ExtResource("2_otv6y")
+metadata/_custom_type_script = "uid://c57tplhycy8bl"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+theme_override_styles/separator = SubResource("StyleBoxFlat_vxuhx")
+
+[node name="SaveGameButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Save Game"
+alignment = 0
+script = ExtResource("2_otv6y")
+metadata/_custom_type_script = "uid://c57tplhycy8bl"
+
+[node name="OptionsButtons" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Options
+"
+alignment = 0
+script = ExtResource("2_otv6y")
+metadata/_custom_type_script = "uid://c57tplhycy8bl"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_3tcw5")
+text = "Exit"
+alignment = 0
+script = ExtResource("2_otv6y")
+metadata/_custom_type_script = "uid://c57tplhycy8bl"
+
+[node name="HintControls" parent="MarginContainer/Panel/MarginContainer" instance=ExtResource("2_du0dh")]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

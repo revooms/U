@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmb1moxelher1"]
+
+[ext_resource type="Script" uid="uid://c57tplhycy8bl" path="res://game/ui/components/pause_menu_button.gd" id="1_ops1c"]
+
+[node name="PauseMenuButton" type="Button"]
+offset_right = 197.0
+offset_bottom = 31.0
+text = "Untitled Button"
+alignment = 0
+script = ExtResource("1_ops1c")
