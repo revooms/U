@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c46g62nwnaqv5"]
+[gd_scene load_steps=25 format=3 uid="uid://c46g62nwnaqv5"]
 
 [ext_resource type="Script" uid="uid://bv3kushyw8jq6" path="res://game/world/maps/world.gd" id="1_5hesp"]
 [ext_resource type="Environment" uid="uid://212vl3pv7pwc" path="res://game/game_environment.tres" id="1_k7f6b"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://ny80tpie1ovk" path="res://game/assets/textures/prototypes/green_n.png" id="6_5hesp"]
 [ext_resource type="PackedScene" uid="uid://dm5s6cn53tl8k" path="res://game/prefabs/stations/station1.tscn" id="6_uynus"]
 [ext_resource type="PackedScene" uid="uid://c6te5xhex8y58" path="res://game/player/Player.tscn" id="10_fnsbx"]
+[ext_resource type="PackedScene" uid="uid://ctpcsoi03l0wt" path="res://game/prefabs/stations/station_template.tscn" id="10_xdv3b"]
+[ext_resource type="PackedScene" uid="uid://b8p6w6yb8w5t0" path="res://game/prefabs/stations/station2.tscn" id="12_8xy6y"]
+[ext_resource type="PackedScene" uid="uid://nleyangx0kgk" path="res://game/prefabs/stations/station3.tscn" id="13_8wcau"]
+[ext_resource type="PackedScene" uid="uid://otnv4desxg08" path="res://game/prefabs/stations/station4.tscn" id="14_ta8i1"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vwhhl"]
 size = Vector2(1000, 1000)
@@ -124,7 +128,19 @@ metadata/_edit_lock_ = true
 [node name="ReferenceCube" parent="Node" instance=ExtResource("5_uynus")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46283, 0, 4.94023)
 
-[node name="Station1" parent="." instance=ExtResource("6_uynus")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.4772, 225.674)
-
 [node name="Player" parent="." instance=ExtResource("10_fnsbx")]
+
+[node name="StationTemplate" parent="." instance=ExtResource("10_xdv3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 402.458, 3367.15)
+
+[node name="Station1" parent="." instance=ExtResource("6_uynus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.592, 34.4772, 225.674)
+
+[node name="Station2" parent="." instance=ExtResource("12_8xy6y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 189.16, -2965.54)
+
+[node name="Station3" parent="." instance=ExtResource("13_8wcau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3014.36, 649.925, 0)
+
+[node name="Station4" parent="." instance=ExtResource("14_ta8i1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3002.65, 195.125, 0)

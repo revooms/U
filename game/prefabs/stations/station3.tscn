@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://nleyangx0kgk"]
+
+[ext_resource type="Script" uid="uid://cpgr2m1ja01jq" path="res://game/prefabs/stations/station_3.gd" id="1_f5ucr"]
+[ext_resource type="PackedScene" uid="uid://ppi8i4lkm6v7" path="res://game/assets/models/stations/Station3.blend" id="2_vio2d"]
+
+[node name="Station3" type="Node3D"]
+script = ExtResource("1_f5ucr")
+
+[node name="Station3" parent="." instance=ExtResource("2_vio2d")]
